@@ -10,6 +10,7 @@ let create = async(req, res, next)=>{
         let one = await Client.create(req.body)
 
         const newUser=await User.findByIdAndUpdate(
+
             req.user._id,
             {
                 role:2
@@ -19,6 +20,7 @@ let create = async(req, res, next)=>{
         return res.status(201).json({
             status:201,
             success:true,
+
             response:`Client ${one.name} created successfully`,
             client:one,
             user:newUser
@@ -29,7 +31,9 @@ let create = async(req, res, next)=>{
         return res.status(400).json({
             status:400,
             success:false,
+
             response:`oppsss`
+
     })
     }
 
