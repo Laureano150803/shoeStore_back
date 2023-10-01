@@ -9,7 +9,8 @@ let create = async(req, res, next)=>{
 
         let one = await Client.create(req.body)
 
-        await User.findByIdAndUpdate(
+        const newUser=await User.findByIdAndUpdate(
+
             req.user._id,
             {
                 role:2
@@ -19,7 +20,10 @@ let create = async(req, res, next)=>{
         return res.status(201).json({
             status:201,
             success:true,
-            Response:`Client ${one.name} created successfully`
+
+            response:`Client ${one.name} created successfully`,
+            client:one,
+            user:newUser
     }) 
         
     } catch (error) {
@@ -27,7 +31,9 @@ let create = async(req, res, next)=>{
         return res.status(400).json({
             status:400,
             success:false,
-            Response:`oppsss`
+
+            response:`oppsss`
+
     })
     }
 

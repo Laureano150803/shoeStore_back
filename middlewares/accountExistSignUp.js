@@ -6,7 +6,8 @@ async function accountExistsSignUp(req, res, next) {
         if (user) {
             return res.status(400).json({
                 status: 400,
-                Response: 'User already exists'
+
+                response: 'User already exists'
             });
         }
         return next();
@@ -14,7 +15,7 @@ async function accountExistsSignUp(req, res, next) {
         // Manejar el error aquí
         return res.status(500).json({
             status: 500,
-            Response: 'Internal Server Error'
+            response: 'Internal Server Error'
         });
     }
 }
