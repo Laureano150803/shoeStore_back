@@ -6,7 +6,7 @@ const read = async (req, res) => {
         if (all.length === 0) {
             return res.status(200).json({
                 success: true,
-                response: "Shoes nor found"
+                response: "Shoes not found"
             })
         }
         return res.status(200).json({
