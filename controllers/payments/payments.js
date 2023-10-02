@@ -20,8 +20,8 @@ const payments = async (req, res, next) => {
         },
       ],
         back_urls: {
-          success: 'https://shoe-store-front-f9uc.vercel.app/',
-          failure: 'https://shoe-store-front-f9uc.vercel.app/',
+          success: 'https://shoe-store-front-umber.vercel.app/',
+          failure: 'https://shoe-store-front-umber.vercel.app/',
           pending: '',
         },
         auto_return: "approved",
