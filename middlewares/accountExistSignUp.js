@@ -6,7 +6,6 @@ async function accountExistsSignUp(req, res, next) {
         if (user) {
             return res.status(400).json({
                 status: 400,
-
                 response: 'User already exists'
             });
         }

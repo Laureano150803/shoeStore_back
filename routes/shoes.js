@@ -7,11 +7,9 @@ import update from "../controllers/Shoe/update.js";
 import getOne from "../controllers/Shoe/getOne.js";
 import passport from "passport";
 
-router.post('/new',passport.authenticate('jwt', {session:false}), create)
+
 router.get('/:id', getOne)
 router.get('/', read)
-import passport from "passport";
-
 router.post('/new',passport.authenticate('jwt', {session:false}), create)
 router.get('/',passport.authenticate('jwt', {session:false}), read)
 router.delete('/:id',passport.authenticate('jwt', {session:false}), deleteById)
