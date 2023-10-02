@@ -14,8 +14,10 @@ router.use('/auth', usersRouter)
 router.use('/clients', clientsRouter)
 router.use('/shoes', shoesRouter)
 router.use('/companies', companiesRouter)
+
 router.use('/cart',cartRouter)
 router.use('/payment', payments)
+
 
 
 export default router
